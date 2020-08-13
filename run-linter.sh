@@ -1,0 +1,1 @@
+find . -name '*.py' | xargs -I % sh -c '{ black --diff -l $LINE_LEN --check -S %; flake8 --max-line-length $LINE_LEN %; }'
